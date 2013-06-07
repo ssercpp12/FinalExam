@@ -1,0 +1,107 @@
+<h1>Plasmid</h1>
+
+<h2>Description</h2>
+
+<p>Plasmid(质粒) can be treated as a connection of different components. Components
+can be protein, DNA or RNA. A plasmid starts with a prefix, then a certain 
+components connected by a intervening sequence, finally a suffix. Furthermore,
+plasmid can be assembled by multiple rules, for instance, RFC10 and RFC25.
+Each rule defines its own prefix, suffix, intervening sequence and some special
+rules.</p>
+
+<p>RFC10 assembles components in such way:</p>
+
+<ol>
+<li>If the first component is DNA or RNA, then prefix is
+"GATACAG".</li>
+<li>If the first component is protein, the prefix is "GATAG"</li>
+<li>The intervening sequence is "TACTAGAG".</li>
+<li>The suffix is "TACGCAG".</li>
+</ol>
+
+<p>RFC25 assembles components in such way:</p>
+
+<ol>
+<li>The prefix is "GAACGGC".</li>
+<li>The intervening sequence is "ACCGGC".</li>
+<li>The suffix is "ACCGCAG".</li>
+<li>If the component is protein, add sequence "GAACTAG" right before the
+component(after prefix or intervening sequence).</li>
+</ol>
+
+<blockquote>
+  <p>for simplicity, the sequences above are shortened than real-world ones.</p>
+</blockquote>
+
+<p>Given class Component and class Plasmid, your work is to write class RFC10 and
+class RFC25, which are derived from class Plasmid.</p>
+
+<p>Please submit everything except the main function.</p>
+
+<p><code>
+enum TYPE { <br />
+  PROTEIN, <br />
+  DNA, <br />
+  RNA <br />
+};
+</code></p>
+
+<p><code>
+struct Component { <br />
+  Component(string s, TYPE t) { <br />
+    sequence = s; <br />
+    type = t; <br />
+  } <br />
+  string sequence; <br />
+  TYPE type; <br />
+};
+</code></p>
+
+<p><code>
+class Plasmid { <br />
+  public: <br />
+    virtual void add_component(Component&amp;) = 0; // add component to plasmid <br />
+    virtual void add_suffix() = 0; // add suffix to the plasmid <br />
+    string get_sequences() const; // return the sequences of the plasmid <br />
+  protected: <br />
+    string sequences; // sequence of plasmid <br />
+    int count; // the amount of components that have been added to plasmid <br />
+};
+</code></p>
+
+<h2>Sample Input</h2>
+
+<p><code>
+  Plasmid *a = new RFC10(); <br />
+  // For debugging purposes, the letters in sequence of component are all <br />
+  // lowercase. You DO NOT need to make any changes to these letters. <br />
+  Component x("aaaa", PROTEIN); <br />
+  Component y("gggg", DNA); <br />
+  a-&gt;add_component(x); <br />
+  cout &lt;&lt; a-&gt;get_sequences() &lt;&lt; endl; <br />
+  a-&gt;add_component(y); <br />
+  cout &lt;&lt; a-&gt;get_sequences() &lt;&lt; endl; <br />
+  a-&gt;add_suffix(); <br />
+  cout &lt;&lt; a-&gt;get_sequences() &lt;&lt; endl;
+</code></p>
+
+<p><code>
+  Plasmid *b = new RFC25(); <br />
+  b-&gt;add_component(x); <br />
+  cout &lt;&lt; b-&gt;get_sequences() &lt;&lt; endl; <br />
+  b-&gt;add_component(y); <br />
+  cout &lt;&lt; b-&gt;get_sequences() &lt;&lt; endl; <br />
+  b-&gt;add_suffix(); <br />
+  cout &lt;&lt; b-&gt;get_sequences() &lt;&lt; endl;
+</code></p>
+
+<h2>Sample Output</h2>
+
+<p><code>
+GATAGaaaa <br />
+GATAGaaaaTACTAGAGgggg <br />
+GATAGaaaaTACTAGAGggggTACGCAG <br />
+GAACGGCGAACTAGaaaa <br />
+GAACGGCGAACTAGaaaaACCGGCgggg <br />
+GAACGGCGAACTAGaaaaACCGGCggggACCGCAG
+</code></p>

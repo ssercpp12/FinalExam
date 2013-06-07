@@ -1,0 +1,47 @@
+<h1>Mule</h1>
+
+<h2>Description</h2>
+
+<p>A mule is a cross between a horse and a donkey. As we all know, horses, donkeys
+and mules are all animals. Given the relationship between the following
+classes, please implement them.
+<img src="./mule.png" alt="img" title="" /></p>
+
+<h2>Sample Input</h2>
+
+<p><code>
+  Horse *a = new Horse(500); <br />
+  Donkey *b = new Donkey(300); <br />
+  Mule *c = new Mule(100); <br />
+  cout &lt;&lt; a-&gt;get_weight() &lt;&lt; endl; <br />
+  cout &lt;&lt; b-&gt;get_weight() &lt;&lt; endl; <br />
+  cout &lt;&lt; c-&gt;get_weight() &lt;&lt; endl; <br />
+  delete a; <br />
+  cout &lt;&lt; endl; <br />
+  delete b; <br />
+  cout &lt;&lt; endl; <br />
+  delete c; <br />
+  cout &lt;&lt; endl;
+</code></p>
+
+<h2>Sample Output</h2>
+
+<p><code>
+500 <br />
+300 <br />
+100 <br />
+Horse destructed! <br />
+Animal destructed!
+</code></p>
+
+<p><code>
+Donkey destructed! <br />
+Animal destructed!
+</code></p>
+
+<p><code>
+Mule destructed! <br />
+Donkey destructed! <br />
+Horse destructed! <br />
+Animal destructed!
+</code></p>

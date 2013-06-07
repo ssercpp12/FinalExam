@@ -1,0 +1,10 @@
+In the question, your task is to complete the following code to make sure that
+it can be compiled and output the right answer.
+
+You need to complete the following items and submit it.
+1. Constructor of class Doubleton;
+2. Static member variables
+3. Static member functions.
+
+Hint: static member variables and member functions; new and delete; Copy
+Control.

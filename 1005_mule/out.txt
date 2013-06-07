@@ -1,0 +1,14 @@
+500
+300
+100
+Horse destructed!
+Animal destructed!
+
+Donkey destructed!
+Animal destructed!
+
+Mule destructed!
+Donkey destructed!
+Horse destructed!
+Animal destructed!
+

@@ -1,0 +1,30 @@
+Implement the following class.
+
+Some code for your reference:
+
+// The number of days for every month when the year is not a leap one.
+int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+// Return true when the |year| is a leap year.
+bool isLeapYear(int year) {
+  if (year % 4)
+    return false;
+  if (!(year % 400))
+    return true;
+  if (!(year % 100))
+    return false;
+  return true;
+}
+
+Some use case:
+Date d(2013, 5, 25);
+cout << d++ << endl;   // Should output in one line: 2013-5-25.
+cout << ++d << endl;   // Should output in one line: 2013-5-27.
+
+Data d2(2012, 12, 22);
+d > d2 // Should be true.
+d < d2 // Should be false.
+d == d2 // Should be false.
+d != d2 // Should be true.
+
+Hint: Operator overloading. You should submit the definition and implementation of the class Date. Do not forget to submit the reference code if you use it.

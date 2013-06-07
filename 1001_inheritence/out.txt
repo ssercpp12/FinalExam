@@ -1,0 +1,6 @@
+B: 4
+A: 3
+C: 5
+C destructed
+A destructed
+B destructed
