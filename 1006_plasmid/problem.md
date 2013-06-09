@@ -1,9 +1,9 @@
 # Plasmid
 ## Description
 Plasmid(质粒) can be treated as a connection of different components. Components
-can be protein, DNA or RNA. A plasmid starts with a prefix, then a certain 
-components connected by a intervening sequence, finally a suffix. Furthermore,
-plasmid can be assembled by multiple rules, for instance, RFC10 and RFC25.
+can be protein(蛋白质), DNA or RNA. A plasmid starts with a prefix(前缀), then a certain 
+components connected by a intervening sequence(间隔序列), finally a suffix(后缀).
+Furthermore, plasmid can be assembled by multiple rules, for instance, RFC10 and RFC25.
 Each rule defines its own prefix, suffix, intervening sequence and some special
 rules.
 
