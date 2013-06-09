@@ -3,11 +3,11 @@
 Watch the following code.
 
 ```
-int main(void) {  
-  C *c = new C(3, 4, 5);  
-  delete c;  
-  return 0;  
-}  
+int main(int argc, const char *argv[]) {
+  A* ptr = new C(3, 4, 5);
+  delete ptr;
+  return 0;
+}
 ```
 
 It will print output like this.
