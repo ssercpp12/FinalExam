@@ -5,8 +5,9 @@ to take statistics about the frequency of the word we use. Your work is to
 collect sentences given by others and calculate frequency of each word. To
 simplify your work, it's guaranteed that there will only be lowercase letters
 and spaces in a sentence. You also need to implement a function to get the most
-common word of all the words. If there are no words in the counter, just print
-"No nords yet!". Operator<< is overloaded to print all words in the
+common word of all the words. If there are multiple answers, choose the
+lexicographically smallest one. If there are no words in the counter, just print
+"No words yet!". Operator<< is overloaded to print all words in the
 counter. Please print all the words in lexicographical order.
 Given the definition of the class, please implement it.
 
@@ -40,11 +41,11 @@ class Counter {
 
 ## Sample Output
 ```
-No words yet!  
+No word yet!  
 2  
 1  
 0  
-to  
+be  
 2  
 that  
 a : 1  
