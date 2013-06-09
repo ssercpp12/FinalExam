@@ -3,8 +3,9 @@
 XOR is an operator for binary numbers which applys an non-carry addition on
 two numbers digit by digit. For example, 1010 XOR 0110 = 1100. Now we extend XOR
 into m-based numbers. For example, for 5-based number, 40302 XOR 44312 = 34114.
+That is, for two m-based digit x and y, x XOR y = (x + y) % m.
 
-Given two m-based numbers with n digits. For each number, you can rearrange the
+Given two m-based numbers with n digits. you can rearrange the order of each
 number by swapping any two digits in this number. After rearranging two numbers,
 you XOR two numbers and get a new number.
 
@@ -30,7 +31,8 @@ Note that no extra spaces should be printed at the end of line.
 
 ## Sample Input
 ```
-4 7  
+4 7
+5 4 3 2  
 5 6 5 4  
 5 5  
 2 4 4 1 3  
@@ -42,3 +44,6 @@ Note that no extra spaces should be printed at the end of line.
 6 4 2 1  
 4 4 4 3 2  
 ```
+
+## Hint
+For first test case, you 
