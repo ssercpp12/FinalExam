@@ -4,9 +4,10 @@
 
 <p>XOR is an operator for binary numbers which applys an non-carry addition on
 two numbers digit by digit. For example, 1010 XOR 0110 = 1100. Now we extend XOR
-into m-based numbers. For example, for 5-based number, 40302 XOR 44312 = 34114.</p>
+into m-based numbers. For example, for 5-based number, 40302 XOR 44312 = 34114.
+That is, for two m-based digit x and y, x XOR y = (x + y) % m.</p>
 
-<p>Given two m-based numbers with n digits. For each number, you can rearrange the
+<p>Given two m-based numbers with n digits. you can rearrange the order of each
 number by swapping any two digits in this number. After rearranging two numbers,
 you XOR two numbers and get a new number.</p>
 
@@ -35,7 +36,8 @@ least significant ones.</p>
 <h2>Sample Input</h2>
 
 <p><code>
-4 7 <br />
+4 7
+5 4 3 2 <br />
 5 6 5 4 <br />
 5 5 <br />
 2 4 4 1 3 <br />
@@ -48,3 +50,10 @@ least significant ones.</p>
 6 4 2 1 <br />
 4 4 4 3 2
 </code></p>
+
+<h2>Hint</h2>
+
+<p>In first test case, rearrange the two numbers in the follow way: <br />
+            2 5 4 3 <br />
+      XOR   4 6 5 5 <br />
+result is:  6 4 2 1  </p>

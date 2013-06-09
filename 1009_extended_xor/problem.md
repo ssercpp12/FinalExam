@@ -46,4 +46,8 @@ Note that no extra spaces should be printed at the end of line.
 ```
 
 ## Hint
-For first test case, you 
+In first test case, rearrange the two numbers in the follow way:  
+            2 5 4 3  
+      XOR   4 6 5 5  
+result is:  6 4 2 1  
+
