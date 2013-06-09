@@ -41,7 +41,7 @@ class Counter {
 
 ## Sample Output
 ```
-No word yet!  
+No words yet!  
 2  
 1  
 0  

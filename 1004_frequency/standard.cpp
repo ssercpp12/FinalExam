@@ -38,7 +38,7 @@ int Counter::operator[](string word) {
 
 string Counter::get_most_common() {
   int maxl = -1;
-  string ret = "No word yet!";
+  string ret = "No words yet!";
   for (map<string, int>::iterator it = frequency_.begin();
       it != frequency_.end(); it++)
     if (it->second > maxl) {
