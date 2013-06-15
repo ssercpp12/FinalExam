@@ -34,7 +34,7 @@ class Counter {
   std::cout << a["not"] << std::endl;  
   std::cout << a["py"] << std::endl;  
   std::cout << a.get_most_common() << std::endl;  
-  a.add_sentence(" that is not a question");  
+  a.add_sentence(" that  is not a question");  
   std::cout << a["not"] << std::endl;  
   a.add_sentence("that that");  
   std::cout << a.get_most_common() << std::endl;  
@@ -59,3 +59,13 @@ question : 1
 that : 3  
 to : 2  
 ```
+
+## Hint
+You may use `getline` to split strings.
+
+```
+istream& getline (istream& is, string& str, char delim);
+```
+
+Note that `getline` with delimiter may store an empty character when
+delimiters continuously appear in a string.

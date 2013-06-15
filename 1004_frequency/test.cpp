@@ -63,7 +63,7 @@ int main(int argc, const char *argv[]) {
   std::cout << a["not"] << std::endl;  
   std::cout << a["py"] << std::endl;  
   std::cout << a.get_most_common() << std::endl;  
-  a.add_sentence("     that is not a question");  
+  a.add_sentence(" that  is not a question");  
   std::cout << a["not"] << std::endl;  
   a.add_sentence("that that");  
   std::cout << a.get_most_common() << std::endl;  
