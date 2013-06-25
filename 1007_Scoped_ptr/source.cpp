@@ -24,7 +24,7 @@ scoped_ptr<T>::~scoped_ptr() {
 
 template<typename T>
 void scoped_ptr<T>::reset(T* p) {
-  if (ptr !=p) {
+  if (ptr != p) {
     delete ptr;
     ptr = p;
   }
